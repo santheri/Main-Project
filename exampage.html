@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Simulating navigation to the next question
+        function goToNextQuestion() {
+            // Simulate loading a new question by refreshing the content
+            location.href = 'https://unstop.com/code/challenge-assessment/262419?moduleId=372'; // Replace with actual next-question URL
+        }
+
+        // Compile and Test functionality
+        function compileCode() {
+            const code = document.getElementById('code-editor').value;
+            const outputBlock = document.getElementById('output-block');
+            const outputText = document.getElementById('output-text');
+
+            // Simulated output (can be connected to backend later)
+            outputText.innerText = `Compiled Output:\nYour code:\n${code}`;
+            outputBlock.classList.remove('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header Section -->
+        <header class="bg-white shadow p-4 flex justify-between items-center">
+            <div class="text-gray-600">Coding Challenge</div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                <!-- Problem Statement Block -->
+                <div class="lg:col-span-4 bg-white shadow rounded-lg p-6">
+                    <h2 class="text-xl font-semibold text-gray-800">Problem Statement</h2>
+                    <p class="text-gray-700 mt-4">Vikas is trying to find words that can be formed out of given characters, help him solve the below-given puzzle. A string is good if it can be formed by characters from chars (each character can only be used once). Return the sum of lengths of all good strings in words.</p>
+                </div>
+
+                <!-- Input Format Block -->
+                <div class="bg-white shadow rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Input Format</h3>
+                    <p class="text-gray-700 mt-4">First line contains integer n (no of strings). Second line contains n space-separated strings. Third line contains string chars.</p>
+                </div>
+
+                <!-- Constraints Block -->
+                <div class="bg-white shadow rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Constraints</h3>
+                    <ul class="list-disc list-inside text-gray-700 mt-4">
+                        <li>1 ≤ n ≤ 10<sup>4</sup></li>
+                        <li>1 ≤ chars.length ≤ 10<sup>6</sup></li>
+                        <li>Strings contain only lowercase English letters</li>
+                    </ul>
+                </div>
+
+                <!-- Expected Output Block -->
+                <div class="bg-white shadow rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Expected Output</h3>
+                    <p class="text-gray-700 mt-4">Print the sum of lengths of all good strings in words.</p>
+                </div>
+            </div>
+
+            <!-- Code Editor Block -->
+            <div class="mt-6 bg-white shadow rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800">Write Your Code</h3>
+                <textarea id="code-editor" class="w-full h-60 mt-4 bg-gray-100 border border-gray-300 rounded p-4" placeholder="Write your Python code here..."></textarea>
+                <div class="mt-4 space-x-2">
+                    <button onclick="compileCode()" class="bg-green-500 text-white px-4 py-2 rounded">Compile & Test</button>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        <a href="completion.html" class="text-white">Submit</a>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Output Block -->
+            <div id="output-block" class="hidden mt-6 bg-gray-100 border border-gray-300 rounded p-6">
+                <h3 class="text-lg font-semibold">Output:</h3>
+                <pre id="output-text" class="mt-4 text-gray-700"></pre>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="bg-gray-50 p-4 text-center border-t border-gray-200">
+            <p class="text-gray-600">Coding Challenge Platform</p>
+        </footer>
+    </div>
+</body>
+</html>
