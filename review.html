@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header Section -->
+        <header class="bg-blue-600 text-white p-4">
+            <h1 class="text-center text-2xl font-bold">Review</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Student Information -->
+            <div class="bg-white shadow rounded-lg p-6 mb-6">
+                <h2 class="text-xl font-semibold text-gray-800">Student Information</h2>
+                <p class="text-gray-700 mt-2"><strong>Name:</strong> John Doe</p>
+                <p class="text-gray-700 mt-1"><strong>Email:</strong> john.doe@example.com</p>
+            </div>
+
+            <!-- Questions Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Question 1 -->
+                <div class="bg-white shadow rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Question 1</h3>
+                    <p class="text-gray-700 mt-2">Plagiarism Found: <span class="font-bold text-red-600">25%</span></p>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-white shadow rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Question 2</h3>
+                    <p class="text-gray-700 mt-2">Plagiarism Found: <span class="font-bold text-red-600">45%</span></p>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-white shadow rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Question 3</h3>
+                    <p class="text-gray-700 mt-2">Plagiarism Found: <span class="font-bold text-red-600">10%</span></p>
+                </div>
+            </div>
+
+            <!-- Go to Dashboard Button -->
+            <div class="mt-6 flex justify-center">
+                <a href="dashboard.html" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg">
+                    Go to Dashboard
+                </a>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-50 p-4 text-center border-t border-gray-200">
+            <p class="text-gray-600">Review System</p>
+        </footer>
+    </div>
+</body>
+</html>
