@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen">
+    <div class="flex h-full">
+        <!-- Sidebar -->
+        <aside class="bg-blue-800 text-white w-64 p-6">
+            <div class="text-center mb-8">
+                <div class="bg-blue-600 rounded-full w-16 h-16 mx-auto flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0v7m0-7L3 9m9 5l9-5" />
+                    </svg>
+                </div>
+                <h2 class="text-xl font-bold mt-4">Abhi</h2>
+                <p class="text-sm">(Student)</p>
+            </div>
+            <nav>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="/dashboard" class="flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h11M9 21V3" />
+                            </svg>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/instruction" class="flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-8 0v2M12 3a4 4 0 110 8 4 4 0 010-8z" />
+                            </svg>
+                            <span>Examination</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a4 4 0 00-8 0v2m-2 0a4 4 0 018 0m2 0v5a2 2 0 01-2 2h-4a2 2 0 01-2-2v-5m6 0H9" />
+                            </svg>
+                            <span>My Marks</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold">Online Exam</h1>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    <a href="home.html" class="text-white">Logout</a>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-blue-600 text-white p-6 rounded shadow">
+                    <h2 class="text-lg font-bold">Available Exam</h2>
+                </div>
+                <div class="bg-gray-600 text-white p-6 rounded shadow">
+                    <h2 class="text-lg font-bold">Total Question</h2>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-gray-400 h-16 rounded"></div>
+        </main>
+    </div>
+</body>
+</html>
