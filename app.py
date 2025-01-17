@@ -1,20 +1,15 @@
 from flask import Flask,render_template,request,redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
+from models import *
 
 app = Flask(__name__)
 
-db = SQLAlchemy()
+
 #configure the SQLite database, relative to the app instance folder
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///Student.db"
 db.init_app(app)
 
-class Student(db.Model):
-    _tablename_="Students"
-    S_id=db.Column(db.Integer,primary_key=True)
-    S_name=db.Column(db.String,unique=False)
-    S_email=db.Column(db.String,unique=True)
-    S_phone=db.Column(db.String,unique=True)
-    S_password=db.Column(db.String,unique=True)
+
 
 with app.app_context():
     db.create_all()
@@ -31,9 +26,10 @@ def signup():
         phone=request.form["phone"]
         password=request.form["password"]
         student=Student(S_name=Name,S_email=email,S_phone=phone,S_password=password)
-        print(student)
+       
         db.session.add(student)
         db.session.commit()
+        print(student)
         data="Registration Succesful"
         return render_template("studentlogin.html",data=data)
     return render_template("signup.html")
