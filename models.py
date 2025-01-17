@@ -4,7 +4,7 @@ db = SQLAlchemy()
 
 
 class Student(db.Model):
-    _tablename_="Students"
+    __tablename__="Students"
     S_id=db.Column(db.Integer,primary_key=True)
     S_name=db.Column(db.String,unique=False)
     S_email=db.Column(db.String,unique=True)
